@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <title> Prueba Técnica Roberto Agudelo C</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"> Menú </h1>
+            <nav id="site-nav" class="site-nav">
+                <ul class="menuprincipal">
+                    <li><a href="#"><i class="fa fa-home site-nav--icon"> Inicio </i></a></li>
+                    <li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"> Trabajos </i></a></li>
+                    <li><a href="#" id="producto"><i class="fa fa-rocket" aria-hidden="true"> Proyectos</i></a></li>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa fa-rocket" aria-hidden="true"> Sub Elemento #1 </i></a></li>
+                        <li><a href="#"><i class="fa fa-rocket" aria-hidden="true"> Sub Elemento #2 </i></a></li>
+                        <li><a href="#"><i class="fa fa-rocket" aria-hidden="true"> Sub Elemento #3 </i></a></li>
+                    </ul>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="cambiarClase()">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#producto').click(function() {
+                $('ul.submenu').toggleClass('activate');
+            })
+        })
+    </script>
+</body>
+
+</html>
